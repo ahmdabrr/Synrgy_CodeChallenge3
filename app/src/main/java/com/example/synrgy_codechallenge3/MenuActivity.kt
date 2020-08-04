@@ -1,13 +1,13 @@
-package com.example.codechallengegamesuitsynrgy
+package com.example.synrgy_codechallenge3
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.example.synrgy_codechallenge3.R
 import com.example.synrgy_codechallenge3.databinding.ActivityMainBinding
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_menu.*
 
-class MainActivity : AppCompatActivity() {
+class MenuActivity : AppCompatActivity() {
     //deklarasi
 
     var inputComp = ""
