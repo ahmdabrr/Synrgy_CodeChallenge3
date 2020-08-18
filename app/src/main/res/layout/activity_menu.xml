@@ -5,60 +5,205 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryBackground"
-    tools:context=".MenuActivity">
+    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tvHalamanMenu"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/header1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:text="Pilih Lawanmu"
-        android:textSize="20sp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/header3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <ImageView
+        android:id="@+id/tvKertas"
+        android:layout_width="196dp"
+        android:layout_height="125dp"
+        android:src="@drawable/splash_screen1"
+        app:layout_constraintBottom_toBottomOf="@id/header3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/header1"
+        app:layout_constraintVertical_bias="0.565" />
 
-    <ImageView
-        android:id="@+id/ivPlayer"
-        android:layout_width="213dp"
-        android:layout_height="170dp"
-        android:layout_marginBottom="328dp"
-        android:src="@drawable/landing_page1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/tvHalamanMenu"
-        app:layout_constraintStart_toStartOf="@+id/tvHalamanMenu"
-        app:layout_constraintTop_toBottomOf="@+id/tvHalamanMenu"
-        app:layout_constraintVertical_bias="0.779" />
+    <!--Pemain 1-->
 
     <TextView
-        android:id="@+id/textView2"
+        android:textColor="#29B6F6"
+        android:id="@+id/tvPemain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Player vs Player 2"
-        app:layout_constraintEnd_toEndOf="@+id/ivPlayer"
-        app:layout_constraintStart_toStartOf="@+id/ivPlayer"
-        app:layout_constraintTop_toBottomOf="@+id/ivPlayer" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Pemain 1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header3" />
 
     <ImageView
-        android:id="@+id/ivCOM"
-        android:layout_width="206dp"
-        android:layout_height="146dp"
+        android:id="@+id/ivBatuPemain"
+        app:layout_constraintTop_toBottomOf="@id/tvPemain"
+        app:layout_constraintStart_toStartOf="@id/tvPemain"
+        app:layout_constraintEnd_toEndOf="@id/tvPemain"
         android:layout_marginTop="24dp"
-        android:src="@drawable/landing_page2"
-        app:layout_constraintEnd_toEndOf="@+id/ivPlayer"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="@+id/ivPlayer"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="@id/ivBatuPemain"
+        app:layout_constraintStart_toStartOf="@id/ivBatuPemain"
+        app:layout_constraintEnd_toEndOf="@id/ivBatuPemain"
+        app:layout_constraintBottom_toBottomOf="@id/ivBatuPemain"
+        android:src="@drawable/batu"
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+
+    <ImageView
+        android:id="@+id/ivKertasPemain"
+        app:layout_constraintTop_toBottomOf="@id/ivBatuPemain"
+        app:layout_constraintStart_toStartOf="@id/ivBatuPemain"
+        app:layout_constraintEnd_toEndOf="@id/ivBatuPemain"
+        android:layout_marginTop="24dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="@id/ivKertasPemain"
+        app:layout_constraintStart_toStartOf="@id/ivKertasPemain"
+        app:layout_constraintEnd_toEndOf="@id/ivKertasPemain"
+        app:layout_constraintBottom_toBottomOf="@id/ivKertasPemain"
+        android:src="@drawable/kertas"
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+
+    <ImageView
+        android:id="@+id/ivGuntingPemain"
+        app:layout_constraintTop_toBottomOf="@id/ivKertasPemain"
+        app:layout_constraintStart_toStartOf="@id/ivKertasPemain"
+        app:layout_constraintEnd_toEndOf="@id/ivKertasPemain"
+        android:layout_marginTop="24dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="@id/ivGuntingPemain"
+        app:layout_constraintStart_toStartOf="@id/ivGuntingPemain"
+        app:layout_constraintEnd_toEndOf="@id/ivGuntingPemain"
+        app:layout_constraintBottom_toBottomOf="@id/ivGuntingPemain"
+        android:src="@drawable/gunting"
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+
+    <!--COM-->
 
     <TextView
-        android:id="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@id/tvPemain"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#29B6F6"
+        android:text="COM"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_marginEnd="40dp"
+        android:id="@+id/tvComputer"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Player vs COM"
-        app:layout_constraintEnd_toEndOf="@+id/ivCOM"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="@+id/ivCOM"
-        app:layout_constraintTop_toBottomOf="@+id/ivCOM" />
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/ivBatuCom"
+        app:layout_constraintTop_toBottomOf="@id/tvComputer"
+        app:layout_constraintStart_toStartOf="@id/tvComputer"
+        android:layout_marginTop="24dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="@id/ivBatuCom"
+        app:layout_constraintStart_toStartOf="@id/ivBatuCom"
+        app:layout_constraintEnd_toEndOf="@id/ivBatuCom"
+        app:layout_constraintBottom_toBottomOf="@id/ivBatuCom"
+        android:src="@drawable/batu"
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+
+    <ImageView
+        android:id="@+id/ivKertasCom"
+        app:layout_constraintTop_toBottomOf="@id/ivBatuCom"
+        app:layout_constraintStart_toStartOf="@id/ivBatuCom"
+        app:layout_constraintEnd_toEndOf="@id/ivBatuCom"
+        android:layout_marginTop="24dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="@id/ivKertasCom"
+        app:layout_constraintStart_toStartOf="@id/ivKertasCom"
+        app:layout_constraintEnd_toEndOf="@id/ivKertasCom"
+        app:layout_constraintBottom_toBottomOf="@id/ivKertasCom"
+        android:src="@drawable/kertas"
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+
+    <ImageView
+        android:id="@+id/ivGuntingCom"
+        app:layout_constraintTop_toBottomOf="@id/ivKertasCom"
+        app:layout_constraintStart_toStartOf="@id/ivKertasCom"
+        app:layout_constraintEnd_toEndOf="@id/ivKertasCom"
+        android:layout_marginTop="24dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="@id/ivGuntingCom"
+        app:layout_constraintStart_toStartOf="@id/ivGuntingCom"
+        app:layout_constraintEnd_toEndOf="@id/ivGuntingCom"
+        app:layout_constraintBottom_toBottomOf="@id/ivGuntingCom"
+        android:src="@drawable/gunting"
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+
+    <ImageView
+        android:id="@+id/ivHasilPertandingan"
+        android:layout_width="167dp"
+        android:layout_height="166dp"
+        android:rotation="-16"
+        android:src="@drawable/ic_vs"
+        app:layout_constraintBottom_toBottomOf="@id/ivGuntingPemain"
+        app:layout_constraintEnd_toStartOf="@id/ivBatuCom"
+        app:layout_constraintStart_toEndOf="@id/ivBatuPemain"
+        app:layout_constraintTop_toTopOf="@id/tvPemain" />
+
+    <!--Home Button-->
+
+    <ImageView
+        android:id="@+id/homeBTN"
+        android:layout_width="59dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--Refresh button-->
+
+    <ImageView
+        android:id="@+id/ivRestart"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/refresh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
